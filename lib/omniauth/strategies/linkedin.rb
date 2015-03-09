@@ -33,7 +33,7 @@ module OmniAuth
           :last_name => raw_info['lastName'],
           :location => raw_info['location'],
           :description => raw_info['headline'],
-          :image => raw_info['pictureUrls'],
+          :image => raw_info['pictureUrls']['values'].first,
           :urls => {
             'public_profile' => raw_info['publicProfileUrl']
           }
